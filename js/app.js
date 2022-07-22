@@ -24,11 +24,11 @@ function agregarPersona(){
     const forma = document.forms["forma"]; //Recuperando el formulario//
     const nombre = forma["nombre"];
     const apellido = forma["apellido"];
+    
+    const persona = new Persona(nombre.value, apellido.value);
+    
+    if(persona.susNombreYApellidoNoEstanVacios()){
 
-    //Para que no agregue datos sin nombre o apellido//
-    if(nombre.value != "" && apellido.value != ""){
-
-        const persona = new Persona(nombre.value, apellido.value);
         console.log(persona);
         personas.push(persona); //Lo agregamos al arreglo de personas//
     
