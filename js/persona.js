@@ -20,6 +20,8 @@ class Persona{
     set apellido(apellido){
         this._apellido = apellido;
     }
-
+    susNombreYApellidoNoEstanVacios(){
+        return (this._nombre != "" && this._apellido != "")
+    }
     
 }
